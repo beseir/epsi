@@ -1,9 +1,10 @@
 import './App.css';
+import ClickerButton from "./components/ClickerButton";
 
 function App() {
   return (
     <div className="App">
-      Hello world
+        <ClickerButton/>
     </div>
   );
 }
