@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
 }
 .App{
   text-align: center;
@@ -10,15 +9,4 @@
   flex-direction: column;
   height: 100%;
 }
-.clickerButton{
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  border:none;
-  color: white;
-  background-color: black;
-  transition: border-radius .1s ease;
-}
-.clickerButton:active{
-  border-radius: 15px;
-}
+

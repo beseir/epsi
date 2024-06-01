@@ -7,11 +7,12 @@ function App() {
     useEffect(() =>{
         tg.ready();
     }, [])
-    const tex = "$$\\[ \\sum_{n=1}^{\\infty} 2^{-n} = 1 \\]$$";
+    const tex = "\\[ \\sum_{n=1}^{\\infty} 2^{-n} = 1 \\]";
     return (
     <div className="App">
-        <Latex>{tex}</Latex>
-      {tg.initDataUnsafe?.user?.username}
+        {tg.initDataUnsafe?.user?.username}
+
+        <div className={"latex-container"}> <Latex className = "latex">{tex}</Latex> </div>
 
 
 
