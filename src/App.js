@@ -7,9 +7,10 @@ function App() {
     useEffect(() =>{
         tg.ready();
     }, [])
-    const tex = "$$latex = {vanya}^{beloded}$$";
+    const tex = "$$\\[ \\sum_{n=1}^{\\infty} 2^{-n} = 1 \\]$$";
     return (
     <div className="App">
+        <Latex>{tex}</Latex>
       {tg.initDataUnsafe?.user?.username}
 
 
