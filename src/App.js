@@ -11,7 +11,8 @@ function App() {
     return (
     <div className="App">
         Привет {tg.initDataUnsafe?.user?.username}
-        <Latex>{tex}</Latex>
+        <img alt = "user avatar" src={tg.initDataUnsafe?.user?.photo_url}/>
+
 
     </div>
   );
