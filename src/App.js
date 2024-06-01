@@ -10,8 +10,8 @@ function App() {
     const tex = "$$latex = {vanya}^{beloded}$$";
     return (
     <div className="App">
-        Привет {tg.initDataUnsafe?.user?.username}
-        <img alt = "user avatar" src={tg.initDataUnsafe?.user?.photo_url}/>
+      {tg.initDataUnsafe?.user?.username}
+
 
 
     </div>
