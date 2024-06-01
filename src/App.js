@@ -11,7 +11,7 @@ function App() {
     const tex = "\\[ \\sum_{n=1}^{\\infty} 2{n}  = " + coins.toString() +  "\\]";
     const clickHandler = () =>{
         setN(n + 1);
-        setCoins(n * 7);
+        setCoins(n * 2);
     }
     useEffect(() =>{
         tg.ready();
