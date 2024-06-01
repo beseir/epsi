@@ -1,7 +1,7 @@
 
-function ClickerButton() {
+function ClickerButton({onClick}) {
     return (
-      <button className={"clickerButton"}>Click</button>
+      <button onClick={onClick} className={"button_clicker"}>n++</button>
     );
 }
 
