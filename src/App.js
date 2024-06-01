@@ -21,7 +21,7 @@ function App() {
 
     return (
     <div className="App">
-        {tg.initDataUnsafe?.user?.username}
+        приветик {tg.initDataUnsafe?.user?.username}
         <div className={"info-container"}> <Latex className = "latex">{tex}</Latex> </div>
         <ClickerButton onClick = {clickHandler} />
 
