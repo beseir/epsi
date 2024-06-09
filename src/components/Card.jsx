@@ -16,7 +16,8 @@ export const Card = () => {
     return (
         <div className={"card"}  onMouseDown={handleMouseDown}
              onMouseUp={handleMouseUp}
-
+             onTouchStart={handleMouseDown}
+             onTouchEnd={handleMouseUp}
              style={{
                  transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
              }} >
