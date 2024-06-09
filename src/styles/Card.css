@@ -9,6 +9,7 @@
     text-align: center;
     transition: transform 0.2s ease-out;
     background: rgb(34,193,195);
+    user-select: none;
     touch-action: manipulation;
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(149,45,253,1) 100%);
 }
