@@ -1,5 +1,5 @@
 import './styles/App.css';
-import {Card} from "./components/Card";
+import {Card} from "./components/Card.jsx";
 const tg = window.Telegram.WebApp;
 function App() {
 
