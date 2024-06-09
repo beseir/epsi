@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Sitka Display", ui-monospace;
 }
 body{
   background-color: #0d0b0e;
@@ -15,8 +16,6 @@ body{
   left: 0;
   display: flex;
   align-items: center;
-  align-content: center;
-  justify-content: center;
-  overflow: auto;
-}
+  flex-direction: column;
 
+}
