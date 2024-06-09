@@ -1,13 +1,10 @@
 import {
     BrowserRouter,
     Routes,
-    Route,
-    Link, useNavigate,
+    Route
 } from 'react-router-dom';
 import {Home} from "./components/Home";
-import {Card} from "./components/Card";
-import {NavPage} from "./components/NavPage";
-import {useEffect} from "react";
+
 import {Market} from "./components/Market";
 import {Edit} from "./components/Edit";
 function App() {
