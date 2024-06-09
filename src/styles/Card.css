@@ -19,3 +19,10 @@
 .card-preview-text{
     margin-top: 20px;
 }
+.card-image{
+    padding: 4px;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+}
