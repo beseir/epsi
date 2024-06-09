@@ -5,9 +5,11 @@ export const Card = () => {
 
     const handleMouseDown = (e) => {
         const card = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - card.left - card.width / 2;
-        const y = e.clientY - card.top - card.height / 2;
-        setRotation({ x: y / 15, y: -x / 15 });
+        const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+        const x = clientX - card.left - card.width / 2;
+        const y = clientY - card.top - card.height / 2;
+        setRotation({ x: y / 14, y: -x / 14 });
     };
 
     const handleMouseUp = () => {
