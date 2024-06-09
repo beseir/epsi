@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #f3f3f3;
+  background-color: #0d0b0e;
+  color: azure;
 }
 .App{
   width: 100%;
