@@ -9,7 +9,7 @@ export const Card = () => {
         const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
         const x = clientX - card.left - card.width / 2;
         const y = clientY - card.top - card.height / 2;
-        setRotation({ x: y / 14, y: -x / 14 });
+        setRotation({ x: y / 13, y: -x / 13 });
     };
 
     const handleMouseUp = () => {
