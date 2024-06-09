@@ -24,7 +24,7 @@ export const Card = () => {
                  transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
              }}>
 
-            <img className={"card-image"} src={"images/test.jpg"} alt={"card image"}/>
+            <img className={"card-image"} src={"images/test.jpg"} alt={"card"}/>
             <h2>CARD NAME</h2>
         </div>
     )
