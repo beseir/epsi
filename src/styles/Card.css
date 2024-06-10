@@ -26,3 +26,21 @@
     object-fit: cover;
     border-radius: 10px;
 }
+.card-rare-level{
+    position: absolute;
+    font-size: 40px;
+    width: 15%;
+    height: 10%;
+    right:0;
+    bottom: 0;
+    border-radius: 10px;
+    margin: 6px;
+    color: rgba(240, 255, 255, 0.51);
+}
+.card-stats{
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "Arial Black", serif;
+
+}
