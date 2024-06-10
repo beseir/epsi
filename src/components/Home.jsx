@@ -17,7 +17,7 @@ export const Home = () => {
         <>
             <div className="App">
                 <h1 className={"coins-text"}>{coins}</h1>
-                <h4 className={"card-preview-text"}>Привет {tg.initDataUnsafe?.user?.username}, вот твоя карточка:</h4>
+                <h4 className={"card-preview-text"}>Привет {tg.initDataUnsafe?.user?.photo_url}, вот твоя карточка:</h4>
                 <Card onClick={onCardClick}/>
             </div>
             <NavPage/>
