@@ -22,3 +22,9 @@ body{
   font-family: Tahoma, serif;
   margin-top: 15px;
 }
+.scroll-view{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+
+}

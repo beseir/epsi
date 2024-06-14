@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="telegram-web-app" level="application" />
     <orderEntry type="library" name="mathjax" level="application" />
+    <orderEntry type="library" name="@egjs/flicking" level="application" />
   </component>
 </module>

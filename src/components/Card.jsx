@@ -1,6 +1,6 @@
 import "../styles/Card.css"
 import {useState} from "react";
-export const Card = ({onClick}) => {
+export const Card = () => {
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
     const handleMouseDown = (e) => {
@@ -11,7 +11,7 @@ export const Card = ({onClick}) => {
         const y = clientY - card.top - card.height / 2;
 
         setRotation({ x: y / 14, y: -x / 14 });
-        onClick();
+
     };
 
     const handleMouseUp = () => {
