@@ -5,11 +5,6 @@ import {Cap} from "./Cap";
 
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
-
-
-
-
-
 export const Home = () => {
     const allCaps = [
         {name: "Cap 1", click_ability: 1, durability:10},
@@ -27,6 +22,9 @@ export const Home = () => {
     const capChangedHandler = useCallback((e) => {
         setCapIndex(e.index);
     }, []);
+    const onCapClick = () => {
+        setCoins((coins) + allCaps[capIndex].click_ability)
+    }
 
 
     return (
@@ -39,9 +37,9 @@ export const Home = () => {
                 <h3>Clicker ability: {allCaps[capIndex].click_ability}</h3>
                 <h3>Durability: {allCaps[capIndex].durability}</h3>
 
-                <Flicking circular={false} onChanged={capChangedHandler}>
+                <Flicking circular={false} onChanged={capChangedHandler} onSelect={capChangedHandler}>
                     {allCaps.map((item, index) =>
-                    <div key={index}><Cap/></div>
+                    <div key={index} onClick={onCapClick}><Cap/></div>
                     )}
                 </Flicking>
 

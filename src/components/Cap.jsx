@@ -1,7 +1,9 @@
 import "../styles/Cap.css";
-import {useState} from "react";
+import { useState} from "react";
 export const Cap = () => {
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
+
+
     const handleMouseDown = (e) => {
         const card = e.currentTarget.getBoundingClientRect();
         const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
@@ -24,7 +26,7 @@ export const Cap = () => {
              style={{
                  transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
              }}>
-        <img className={"cap-image"} src={"./images/test.jpg"} alt={"cap"}/>
+        <img  className={"cap-image"} src={"./images/test.jpg"} alt={"cap"}/>
         </div>
     )
 }
