@@ -1,18 +1,31 @@
 import '../styles/App.css';
 import {NavPage} from "./NavPage";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
+import {Cap} from "./Cap";
 
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
-import {Cap} from "./Cap";
 
-const tg = window.Telegram.WebApp;
+
+
 
 
 export const Home = () => {
+    const allCaps = [
+        {name: "Cap 1", click_ability: 1, durability:10},
+        {name: "Cap 2", click_ability: 2, durability:10},
+        {name: "Cap 3", click_ability: 1, durability:15},
+    ]
+
     const [coins, setCoins] = useState(0);
+    const [capIndex, setCapIndex] = useState(0);
+
     useEffect(() => {
         setCoins(12);
+    }, []);
+
+    const capChangedHandler = useCallback((e) => {
+        setCapIndex(e.index);
     }, []);
 
 
@@ -20,11 +33,16 @@ export const Home = () => {
         <>
             <div className="App">
                 <h1 className={"coins-text"}>{coins}</h1>
-                <h4 className={"card-preview-text"}>Привет {tg.initDataUnsafe?.user?.username || "username"}, вот твоя коллекция:</h4>
-                <Flicking circular={false}>
-                    <div><Cap/></div>
-                    <div><Cap/></div>
-                    <div><Cap/></div>
+
+
+                <h3>Name: {allCaps[capIndex].name}</h3>
+                <h3>Clicker ability: {allCaps[capIndex].click_ability}</h3>
+                <h3>Durability: {allCaps[capIndex].durability}</h3>
+
+                <Flicking circular={false} onChanged={capChangedHandler}>
+                    {allCaps.map((item, index) =>
+                    <div key={index}><Cap/></div>
+                    )}
                 </Flicking>
 
 
