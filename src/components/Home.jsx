@@ -22,9 +22,9 @@ export const Home = () => {
     const capChangedHandler = useCallback((e) => {
         setCapIndex(e.index);
     }, []);
-    const onCapClick = () => {
-        setCoins((coins) + allCaps[capIndex].click_ability)
-    }
+    const onCapClick = useCallback(() => {
+        setCoins((coins) => coins + allCaps[capIndex].click_ability)
+    }, [capIndex]);
 
 
     return (
@@ -32,14 +32,16 @@ export const Home = () => {
             <div className="App">
                 <h1 className={"coins-text"}>{coins}</h1>
 
+                <div className={"stats"}>
+                    <h3>Name: {allCaps[capIndex].name}</h3>
+                    <h3>Clicker ability: {allCaps[capIndex].click_ability}</h3>
+                    <h3>Durability: {allCaps[capIndex].durability}</h3>
+                </div>
 
-                <h3>Name: {allCaps[capIndex].name}</h3>
-                <h3>Clicker ability: {allCaps[capIndex].click_ability}</h3>
-                <h3>Durability: {allCaps[capIndex].durability}</h3>
 
                 <Flicking circular={false} onChanged={capChangedHandler} onSelect={capChangedHandler}>
                     {allCaps.map((item, index) =>
-                    <div key={index} onClick={onCapClick}><Cap/></div>
+                        <div key={index}> <Cap onClick={onCapClick}/></div>
                     )}
                 </Flicking>
 
