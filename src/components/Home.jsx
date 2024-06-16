@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import {NavPage} from "./NavPage";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useState} from "react";
 import {Cap} from "./Cap";
 
 import Flicking from "@egjs/react-flicking";
@@ -14,17 +14,17 @@ export const Home = () => {
 
     const [coins, setCoins] = useState(0);
     const [capIndex, setCapIndex] = useState(0);
+    const coinsPerClick = allCaps[capIndex].click_ability;
 
-    useEffect(() => {
-        setCoins(12);
-    }, []);
 
     const capChangedHandler = useCallback((e) => {
         setCapIndex(e.index);
     }, []);
-    const onCapClick = useCallback(() => {
-        setCoins((coins) => coins + allCaps[capIndex].click_ability)
-    }, [capIndex]);
+
+
+    const onCapClick = () => {
+        setCoins((coins) => coins + coinsPerClick)
+    };
 
 
     return (
